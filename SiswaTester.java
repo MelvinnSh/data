@@ -1,6 +1,20 @@
 //Driver Class
+import java.util.Scanner;
+
 public class SiswaTester {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("inputkan nama siswa : ");
+        String nama = input.nextLine();
+        System.out.println("Masukan id siswa : ");
+        int id = input.nextInt();
+        System.out.println("Masukan ipk siswa : ");
+        double ipk = input.nextDouble();
+
+        Siswa dilla = new Siswa(id, nama, ipk);
+        dilla.print();
+        System.out.println("  ");
+        
         //object
         //Class object = new Constructor
         Siswa averil = new Siswa();
@@ -8,6 +22,7 @@ public class SiswaTester {
         Siswa bima = new Siswa();
         Siswa naufal = new Siswa();
         Siswa rafli = new Siswa();
+        Siswa marsha = new Siswa(23, "marsha", 100.0);
 
         averil.id = 5;
         averil.nama = "averil";
@@ -53,5 +68,23 @@ public class SiswaTester {
         System.out.println("ipk nyaa : " + rafli.ipk);
         System.out.println("   ");
 
+        averil.print();
+        System.out.println("   ");
+        ryuichi.print();
+        System.out.println("   ");
+        bima.print();
+        System.out.println("   ");
+        naufal.print();
+        System.out.println("   ");
+        rafli.print();
+        System.out.println("   ");
+        marsha.print();
+        System.out.println("   ");
+
+        input.close();
+
+
     }
+
+
 }
